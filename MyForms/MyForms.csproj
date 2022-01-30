@@ -31,6 +31,7 @@
     <None Remove="Pages\Landing\Tabs\" />
     <None Remove="Helpers\" />
     <None Remove="Pages\Dialogs\" />
+    <None Remove="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
@@ -44,11 +45,28 @@
     <Folder Include="Pages\Landing\" />
     <Folder Include="Pages\Landing\Tabs\" />
     <Folder Include="Pages\Dialogs\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\Login\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Resources\Lang.pt-PT.Designer.cs">
+      <DependentUpon>Lang.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Lang.Designer.cs">
+      <DependentUpon>Lang.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Lang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Lang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Lang.pt-PT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Lang.pt-PT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

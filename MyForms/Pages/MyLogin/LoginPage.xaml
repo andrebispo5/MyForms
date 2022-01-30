@@ -48,7 +48,8 @@
                 </Label.FormattedText>
             </Label>
 
-            <Button Text="{Binding LoginLabel}"
+            <Button x:Name="LoginButton"
+                    Text="LoginLabel"
                     HeightRequest="35"
                     Margin="20,2"
                     HorizontalOptions="FillAndExpand"
@@ -70,7 +71,8 @@
                     VerticalOptions="Center"
                     Clicked="PlatformDialogClicked"/>
             
-            <Button Text="{Binding CustomRenderLabel}"
+            <Button x:Name="CustomRenderButton"
+                    Text="CustomRenderLabel"
                     HeightRequest="35"
                     Margin="20,2"
                     HorizontalOptions="FillAndExpand"

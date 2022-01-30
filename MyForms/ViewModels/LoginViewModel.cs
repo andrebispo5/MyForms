@@ -1,4 +1,5 @@
-﻿using MyForms.Services;
+﻿using MyForms.Resources;
+using MyForms.Services;
 using MyForms.Services.Interfaces;
 using MyForms.ViewModels.Base;
 using Xamarin.Forms;
@@ -27,9 +28,9 @@ namespace MyForms.ViewModels
 
 
         #region TextLabels
-        public string LoginLabel  => "Login";
-        public string PlatDialogLabel => "Platform Dialog Service";
-        public string CustomRenderLabel => "Custom Renderer";
+        public string LoginLabel  => Lang.login;
+        public string PlatDialogLabel => Lang.platform_dialog;
+        public string CustomRenderLabel => Lang.custom_renderer;
         #endregion
 
     }

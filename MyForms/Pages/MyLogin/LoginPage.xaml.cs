@@ -12,6 +12,14 @@ namespace MyForms.Pages.MyLogin
         {
             InitializeComponent();
             BindingContext = _vm;
+            InitLabels();
+        }
+
+        private void InitLabels()
+        {
+            LoginButton.Text = _vm.LoginLabel;
+            DialogButton.Text = _vm.PlatDialogLabel;
+            CustomRenderButton.Text = _vm.CustomRenderLabel;
         }
 
         void LoginClicked(System.Object sender, System.EventArgs e)
@@ -24,5 +32,7 @@ namespace MyForms.Pages.MyLogin
         void CustomRendererClicked(System.Object sender, System.EventArgs e)
         {
         }
+
+
     }
 }
