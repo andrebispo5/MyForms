@@ -4,6 +4,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using MyForms.Droid.Services;
+using MyForms.Services.Interfaces;
 
 namespace MyForms.Droid
 {
@@ -17,6 +19,8 @@ namespace MyForms.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            App.Container.Register<IDialogService, DialogService>();
+            DialogService.Init(this);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

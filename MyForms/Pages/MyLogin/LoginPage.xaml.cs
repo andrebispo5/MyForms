@@ -12,7 +12,6 @@ namespace MyForms.Pages.MyLogin
         {
             InitializeComponent();
             BindingContext = _vm;
-            _vm.FormsPage = this;
         }
 
         void LoginClicked(System.Object sender, System.EventArgs e)
@@ -20,9 +19,7 @@ namespace MyForms.Pages.MyLogin
             Navigation.PushModalAsync(new NavigationPage(new LandingTabbedPage()));
         }
 
-        void PlatformDialogClicked(System.Object sender, System.EventArgs e)
-        {
-        }
+        async void PlatformDialogClicked(System.Object sender, System.EventArgs e) => _vm.ShowInputDialogClicked();
 
         void CustomRendererClicked(System.Object sender, System.EventArgs e)
         {

@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Diagnostics;
-using Xamarin.Forms;
+using MyForms.Services.Interfaces;
 
 namespace MyForms.ViewModels.Base
 {
-    public abstract class BaseViewModel
+    public abstract class BaseViewModel 
     {
-        public Page FormsPage { get; set; }
-
         public abstract string Identifier { get; }
+        public IDialogService DialogService { get; }
 
-        public BaseViewModel()
+        public BaseViewModel(IDialogService dialogService)
         {
+            DialogService = dialogService;
         }
 
         public async void HandleExceptionAsync(Exception ex)
         {
             Debug.WriteLine(ex.Message);
-            await FormsPage.DisplayAlert("Error", "Something wrong happened", "OK");
+            await DialogService.ShowAlert("Error", "Something wrong happened", "OK");
             // Log analytics
         }
     }

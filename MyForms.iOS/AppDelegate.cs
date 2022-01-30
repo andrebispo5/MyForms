@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using MyForms.iOS.Services;
+using MyForms.Services.Interfaces;
 using UIKit;
 
 namespace MyForms.iOS
@@ -23,8 +25,8 @@ namespace MyForms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            App.Container.Register<IDialogService, DialogService>();
             LoadApplication(new App());
-
             return base.FinishedLaunching(app, options);
         }
     }

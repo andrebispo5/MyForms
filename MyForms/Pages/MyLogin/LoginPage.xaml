@@ -7,8 +7,6 @@
 
         <StackLayout VerticalOptions="CenterAndExpand">
 
-            <Label Text="{Binding Identifier}"/>
-
             <StackLayout
                 Orientation="Horizontal"
                 VerticalOptions="Center"
@@ -50,7 +48,7 @@
                 </Label.FormattedText>
             </Label>
 
-            <Button Text="Login"
+            <Button Text="{Binding LoginLabel}"
                     HeightRequest="35"
                     Margin="20,2"
                     HorizontalOptions="FillAndExpand"
@@ -60,7 +58,8 @@
                     VerticalOptions="Center"
                     Clicked="LoginClicked"/>
 
-            <Button Text="Platform Dialog"
+            <Button x:Name="DialogButton"
+                    Text="{Binding PlatDialogLabel}"
                     HeightRequest="35"
                     Margin="20,2"
                     HorizontalOptions="FillAndExpand"
@@ -71,7 +70,7 @@
                     VerticalOptions="Center"
                     Clicked="PlatformDialogClicked"/>
             
-            <Button Text="CustomRenderer"
+            <Button Text="{Binding CustomRenderLabel}"
                     HeightRequest="35"
                     Margin="20,2"
                     HorizontalOptions="FillAndExpand"

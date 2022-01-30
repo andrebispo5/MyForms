@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         x:Class="MyForms.Pages.Dialogs.PromptDialogPage" BackgroundColor="Transparent">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid BackgroundColor="#bb000000">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Frame x:Name="ContentGrid" Grid.Row="1" CornerRadius="15" BackgroundColor="White" Margin="50,0,50,0" Padding="0">
+                    <Grid  Grid.Row="1" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid x:Name="HeadingGrid" Padding="10, 5, 10, 5" Margin="-15,0,-15,0" Grid.Row="0" BackgroundColor="Black">
+                            <Label x:Name="HeadingLabel" Text="Enter text" TextColor="White" Margin="20,0,20,0"/>
+                        </Grid>
+                        <Label x:Name="DescriptionLabel" Text="Enter your text" Grid.Row="1" Margin="15,0,15,0"/>
+                        <Entry x:Name="DialogResultText" Placeholder="Text" PlaceholderColor="LightGray" TextColor="Black" Grid.Row="2" Margin="15,0,15,0"/>
+                        <Grid Grid.Row="3" ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="CancelButton" Text="Cancel" Clicked="OnCancelClick" Grid.Column="0" CornerRadius="0"/>
+                            <Button x:Name="ConfirmButton" Text="Okay" Clicked="OnOkayClick" Grid.Column="1" CornerRadius="0"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
