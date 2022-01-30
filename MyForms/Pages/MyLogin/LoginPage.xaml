@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyForms.Pages.MyLogin.LoginPage">
+
+    <ScrollView Orientation="Vertical">
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+
+            <Label Text="{Binding Identifier}"/>
+
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand">
+
+                <Frame
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    Padding="0"
+                    IsClippedToBounds="True"
+                    CornerRadius="25"
+                    VerticalOptions="Center">
+
+                    <Image Source="https://i.pinimg.com/564x/b5/33/92/b533920ee75e471a6fb2fb3e7c4297d2.jpg"
+                           Scale="2"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+                </Frame>
+                <Label LineBreakMode="WordWrap" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="My" TextColor="Gray" FontAttributes="Bold" FontSize="50"/>
+                            <Span Text="Forms" TextColor="DarkGray" FontSize="50" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <Label Padding="30"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="This is an " TextColor="DarkGray" />
+                        <Span Text="AWESOME " TextColor="Gray" FontAttributes="Bold" FontSize="Medium"/>
+                        <Span Text="test app in Xamarin Forms!" TextColor="DarkGray" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Button Text="Login"
+                    HeightRequest="35"
+                    Margin="20,2"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="DarkGray"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    Clicked="LoginClicked"/>
+
+            <Button Text="Platform Dialog"
+                    HeightRequest="35"
+                    Margin="20,2"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor="DarkGray"
+                    BorderWidth="1"
+                    BackgroundColor="White"
+                    TextColor="Gray"
+                    VerticalOptions="Center"
+                    Clicked="PlatformDialogClicked"/>
+            
+            <Button Text="CustomRenderer"
+                    HeightRequest="35"
+                    Margin="20,2"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor="DarkGray"
+                    BorderWidth="1"
+                    BackgroundColor="White"
+                    TextColor="Gray"
+                    VerticalOptions="Center"
+                    Clicked="CustomRendererClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
